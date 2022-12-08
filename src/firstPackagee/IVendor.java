@@ -1,11 +1,16 @@
+package firstPackagee;
+
 import java.util.ArrayList;
+import java.util.Map;
+
+import material.Material;
 
 public interface IVendor {
     /**
      * returns the vendor's material list.
      * @return ArrayList<IMaterial>
      */
-    public ArrayList<IMaterial>getListOfMaterials();
+    public Map<String,ArrayList<Material>>getListOfMaterials();
     
     /**
      * returns the vendor's copy.

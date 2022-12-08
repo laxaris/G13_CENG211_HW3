@@ -1,4 +1,6 @@
-import java.util.Dictionary;
+package firstPackagee;
+
+import material.IMaterial;
 
 public interface IManufacturer {
     public IList<IMaterial> getInventory();
@@ -7,9 +9,10 @@ public interface IManufacturer {
 
     public IList<IFurniture> getFurnitureList();
 
-    public void buyMaterialsByDay(String[] materials);
+    public void buyMaterialsByDay(int numberOfDay, Vendor vendor);
     
     public void addFurnitureToExpectedFurnitures(String[] furnitures);
+    
     public void produceFurnitures();
 
     

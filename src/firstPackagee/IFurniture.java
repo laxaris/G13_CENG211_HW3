@@ -1,4 +1,7 @@
+package firstPackagee;
+
 import java.util.Dictionary;
+
 
 public interface IFurniture {
 
