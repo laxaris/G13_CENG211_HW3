@@ -1,5 +1,8 @@
 
 package firstPackagee;
+
+import material.Material;
+
 public interface IList<T> {
     public void add(T item);
 
@@ -12,6 +15,8 @@ public interface IList<T> {
     public void remove( T object);
 
     public T[] toArray();
+
+    public IList<T> clone();
 
 }
 

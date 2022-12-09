@@ -4,12 +4,19 @@ import java.util.ArrayList;
 public class FIFOList <T> implements IList<T>{
     ArrayList<T> list;
 
+    public FIFOList(ArrayList<T> list) {
+        this.list = list;
+    }
+
     public FIFOList() {
+        list = new ArrayList<T>();
+    }
+
+    public FIFOList(FIFOList<T> fifoList) {
         list = new ArrayList<T>();
     }
     @Override
     public void add(T item) {
-        System.out.println("çalıştım");
         list.add((T) item);
         
     }
@@ -51,6 +58,10 @@ public class FIFOList <T> implements IList<T>{
             result+= element.toString();
         }
         return result;
+    }
+
+    public IList<T> clone(){
+        return new FIFOList<T>(this);
     }
     
    

@@ -28,6 +28,9 @@ public class Material implements IMaterial {
         return properties.getVolume();
     }
 
+    public int getMaterialCost(){
+        return properties.getCost();
+    }
 
     @Override
     public int getMaterialQuality() {

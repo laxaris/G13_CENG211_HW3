@@ -1,6 +1,9 @@
-package firstPackagee;
+package furnitures;
 
-import java.util.Dictionary;
+import java.util.ArrayList;
+import java.util.Map;
+
+import material.Material;
 
 
 public interface IFurniture {
@@ -30,7 +33,7 @@ public interface IFurniture {
     public int getFurnitureQuality();
 
 
-    public int getInCome();
+    public double getIncome();
 
     /**
      * returns the furniture's properties.
@@ -60,6 +63,6 @@ public interface IFurniture {
      * returns the furniture's needed parts dictionary.
      * @return String
      */
-    public Dictionary<String,Integer> getFurnitureParts();
+    public Map<String, ArrayList<Material>> getFurnitureParts();
     
 }

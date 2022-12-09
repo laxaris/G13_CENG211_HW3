@@ -1,10 +1,8 @@
 package manufacturer;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 import firstPackagee.*;
+import furnitures.IFurniture;
 import material.Material;
 
 

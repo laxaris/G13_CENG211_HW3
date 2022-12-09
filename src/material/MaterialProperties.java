@@ -1,5 +1,4 @@
 package material;
-import java.util.ArrayList;
 
 
 public class MaterialProperties implements IMaterialProperties {

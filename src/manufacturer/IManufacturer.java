@@ -2,9 +2,9 @@ package manufacturer;
 
 import java.util.Map;
 
-import firstPackagee.IFurniture;
 import firstPackagee.IList;
 import firstPackagee.Vendor;
+import furnitures.IFurniture;
 import material.Material;
 
 public interface IManufacturer {

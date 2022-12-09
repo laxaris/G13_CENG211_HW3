@@ -3,14 +3,10 @@ package manufacturer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
-import material.IMaterial;
 import material.Material;
-import fileIO.FileIO;
-import firstPackagee.FIFOList;
-import firstPackagee.IFurniture;
 import firstPackagee.IList;
 import firstPackagee.Vendor;
+import furnitures.IFurniture;
 
 public abstract class Manufacturer implements IManufacturer {
     Map<String, IList<Material>> inventory;
@@ -54,6 +50,13 @@ public abstract class Manufacturer implements IManufacturer {
     public void produceFurnitures() {
         // TODO Auto-generated method stub
         
+    }
+    public Map<String, IList<Material>> cloneMap(Map<String, IList<Material>> map){
+    	Map<String, IList<Material>> clone = new HashMap<String, IList<Material>>();
+    	for(Map.Entry<String, IList<Material>> entry : map.entrySet()) {
+    		clone.put(entry.getKey(), entry.getValue().clone());
+    	}
+    	return clone;
     }
     
 }
