@@ -1,12 +1,14 @@
 package manufacturer;
 
+import java.util.Map;
+
 import firstPackagee.IFurniture;
 import firstPackagee.IList;
 import firstPackagee.Vendor;
-import material.IMaterial;
+import material.Material;
 
 public interface IManufacturer {
-    public IList<IMaterial> getInventory();
+    public Map<String, IList<Material>> getInventory();
 
     public String[] getExpectedFurnitures();
 

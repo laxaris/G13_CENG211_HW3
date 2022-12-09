@@ -1,5 +1,6 @@
 package furnitureFactorySimulation;
 import firstPackagee.*;
+import manufacturer.ManufacturerA;
 import material.MaterialProperties;
 import material.Material;
 import fileIO.FileIO;
@@ -10,7 +11,14 @@ public class FurnitureFactorySimulation implements IFurnitureFactorySimulation{
     @Override
     public void runSimulation() {
         Vendor vendor = vendorFiller();
-        System.out.println(vendor.getListOfMaterials().get("HD501").get(0));
+        ManufacturerA manufacturerA = new ManufacturerA(FileIO.MANUFACTURER_1_MATERIALS);
+        System.out.println(vendor==null);
+        System.out.print(vendor.getListOfMaterials().keySet());
+        manufacturerA.buyMaterialsByDay(1, vendor);
+        System.out.println(manufacturerA.getInventory().keySet());
+        System.out.println(manufacturerA.getInventory().get("PL012").size());
+        System.out.println(manufacturerA.getInventory().get("HD502").toString());
+        
         
     }
 

@@ -40,19 +40,25 @@ public class Vendor implements IVendor {
     	return materials.get(key).remove(0);
     }
 
-    public Vendor(ArrayList<Material> materials) {
-        String key = materials.get(0).getMaterialCode();
+    public Vendor(ArrayList<Material> vendorPossesions) {
+        this.materials = new HashMap<String, ArrayList<Material>>();
+        String key = vendorPossesions.get(0).getMaterialCode();
         ArrayList<Material> listOfMaterial = new ArrayList<>();
-        for(Material element : materials){
-            if(key ==  element.getMaterialCode()){
+        int count = 0;
+        for(Material element : vendorPossesions){
+            count++;
+            System.out.println(count + " " + vendorPossesions.size());
+            if(key ==  element.getMaterialCode()){  
                 listOfMaterial.add(element);
             }
-            else{
+            if(count == vendorPossesions.size() || key !=  element.getMaterialCode() ){
+                System.out.println(count+"basriye");
                 this.materials.put(key, listOfMaterial);
                 key = element.getMaterialCode();
                 listOfMaterial = new ArrayList<>();
                 listOfMaterial.add(element);
             }
         }
+        
     }
 }

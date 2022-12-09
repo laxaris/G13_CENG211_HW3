@@ -3,11 +3,18 @@ import java.util.ArrayList;
 
 public class FIFOList <T> implements IList<T>{
     ArrayList<T> list;
+
+    public FIFOList() {
+        list = new ArrayList<T>();
+    }
     @Override
     public void add(T item) {
+        System.out.println("çalıştım");
         list.add((T) item);
         
     }
+
+
 
     @Override
     public T remove() {
@@ -37,6 +44,14 @@ public class FIFOList <T> implements IList<T>{
         return (T[]) list.toArray();
     }
 
+    public String toString(){
+        String result = "";
+        System.out.println();
+        for(T element: list){
+            result+= element.toString();
+        }
+        return result;
+    }
     
    
     
